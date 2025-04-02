@@ -75,7 +75,7 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           port: 22
           script: |
-            cd ~/sentify-deploy
+            cd ~/sentify-deploy/backend
             # Restart backend using PM2 (or start it if it's not running)
             pm2 restart all || pm2 start server.js --name sentify-backend
             # Optionally, reload your web server (e.g., Nginx) if used:
